@@ -1,0 +1,427 @@
+@media screen and (min-width:320px){
+		html {font-size:12px;}
+}
+@media screen and (min-width:375px){
+	html {font-size:14px;}
+}
+@media screen and (min-width:414px){
+	html {font-size:16px;}
+}
+@media screen and (min-width:640px){
+	html {font-size:24px;}
+}
+/*公共*/
+html,body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	color:#a76200;
+	background-color:#fd9e09;;
+	font-family:"黑体";
+	max-width:750px;
+    margin:0 auto;
+}   
+img{
+  margin:0 auto;
+  display:block;
+}
+ul,ul li{
+    list-style: none;
+	margin:0;
+	padding:0;
+	
+}
+input[type=button]{
+	-webkit-appearance:none;
+	outline:none
+}
+font{
+  font-family: "Helvetica";
+}
+.goldNum2{
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 4.375rem;
+}
+p{
+  margin:0;
+  padding:0;
+}
+.rainbow-radial-gradient{
+  width: 100%;
+  min-height:100%;
+  background-image: -webkit-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FEC32F 65%,#fd9e09 100%);  
+  background-image: -moz-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FEC32F 65%,#fd9e09 100%); 
+  background-image: -o-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,,#FEC32F 65%,#fd9e09 100%); 
+  background-image: -ms-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FEC32F 65%,#fd9e09 100%);  
+  background-image: radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FDBB2E 65%,#fd9e09 100%);   
+}
+
+.dig_nikeName span{
+  color:#ab5b14;
+  font-size:1.875rem;	
+} 
+
+/*错误提示页面*/
+.error-page{
+  display:none;
+}
+
+/*挖出金矿 100mg以下*/
+.gold-dig{
+  display:none;  
+  padding-bottom:3.4375rem
+}
+.gold-dig-bg{
+  background-image:url(../imgs/gold-hb-bg.png);
+  background-repeat:no-repeat;
+  width:19.5625rem;
+  height:23.84375rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;  
+  position:relative;
+}
+/*update:tianyuyan; date:2016-3-28*/
+.gold-dig .top-content{	
+  padding-top:1.625rem;
+  margin-bottom:0.5625rem;
+  text-align: center;
+}
+.gold-dig .top-content span{
+ margin-top: 1.03rem;
+ text-align: center;
+ color:#fff7d2;
+ font-size:0.75rem
+}
+.gold-dig .money-des{
+  width:100%;
+  position:absolute;  
+  top:8.25rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);  
+   text-align: center;
+   color: #FFFFFF;
+   font-size:1.625rem
+}
+.gold-dig .gold-dig_des{
+  position:absolute;  
+  top:13rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);  
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ffe75f
+}
+.gold-dig .gold-dig_date{
+  width:100%;
+  position:absolute;  
+  top:14.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);  
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ffe75f
+}
+.gold-dig .dig_nikeName{  
+  position:absolute;  
+  top:20rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%); 
+  text-align:center;  	
+  background-image:url(../imgs/dig_nikeName.png);
+  background-repeat:no-repeat;
+  width:12.75rem;
+  height:5.5625rem;
+  background-size:100% 100%;
+} 
+.gold-dig .dig_nikeName span{
+  line-height:5.5625rem;
+} 
+
+
+/* 挖出 100mg 最大奖励*/
+.gold-yellow-dig{
+  display:none;
+  padding-bottom:0.625rem
+}
+.gold-yellow-dig .top-content{
+  margin-bottom: -1.71rem;
+  padding-top:1.625rem;
+  text-align: center;
+}
+.gold-yellow-dig .top-content span{
+  width:100%;
+  margin-top: 1.03rem;
+  text-align: center;
+  color:#b34916;
+  font-size:1rem
+}
+.gold-yellow-bg{
+  background-image:url(../imgs/gold-yellow-bg.png);
+  background-repeat:no-repeat;
+  width:24.5rem;
+  height:31.65rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;
+  position:relative;
+}
+.gold-yellow-bg .money-des{
+  width:100%;
+  position:absolute;  
+  top:12rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;	
+  color: #a74b00;  
+  font-size:1.625rem
+}
+.gold-yellow-bg .gold-dig_des{
+  position:absolute;  
+  top:17rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ce7802
+}
+.gold-yellow-bg .gold-dig_date{
+  position:absolute;  
+  top:18.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ce7802
+}
+.gold-yellow-bg .dig_nikeName{  
+  position:absolute;  
+  top:26rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%); 
+  text-align:center;  	
+  background-image:url(../imgs/dig_nikeName.png);
+  background-repeat:no-repeat;
+  width:12.75rem;
+  height:5.5625rem;
+  background-size:100% 100%;
+} 
+.gold-yellow-bg .dig_nikeName span{
+  line-height:5.5625rem;
+} 
+/* 兼容iphone4/4s */
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
+	.gold-yellow-bg{
+	  background-image:url(../imgs/gold-yellow-bg.png);
+	  background-repeat:no-repeat;
+	  width:22.5rem;
+	  height:28.485rem;
+	  background-size:100% 100%;
+	  margin:0 auto;
+	  text-align: center;
+	  position:relative;
+	}
+	.gold-yellow-bg .dig_nikeName{  
+	  position:absolute;  
+	  top:23.4rem;
+	  left:50%;
+	  transform: translateX(-50%);
+	  -ms-transform: translateX(-50%);
+	  -moz-transform: translateX(-50%);
+	  -webkit-transform: translateX(-50%);
+	  -o-transform: translateX(-50%); 
+	  text-align:center;  	
+	  background-image:url(../imgs/dig_nikeName.png);
+	  background-repeat:no-repeat;
+	  width:12.75rem;
+	  height:5.5625rem;
+	  background-size:100% 100%;
+	} 
+}
+
+/*挖出优惠券 coupon*/
+.coupon-dig{
+  display:none;
+  padding-bottom:3.4375rem
+}
+.coupon-dig .top-content{
+  padding-top:1.625rem;
+  margin-bottom:0.625rem; 
+  text-align: center;
+}
+.coupon-dig .top-content span{
+  margin-top: 1.03rem;
+  text-align: center;
+  color:#fff7d2;
+  font-size:1rem;
+  text-shadow:0 1px 1px rgba(255,255,255,1),
+}
+/* 优惠券背景图 */
+.coupon-dig .coupon-bg{
+  background-image:url(../imgs/gold-coupon-bg.png);
+  background-repeat:no-repeat;
+  width:20.25rem;
+  height:24.4125rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;  
+  position:relative;
+}
+.coupon-dig .top-des{  
+  position:absolute;  
+  top:2rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+}
+.coupon-dig .top-des span{
+  font-size: 1.75rem;
+  font-weight:500;
+  color: #ffd676
+}
+.coupon-dig .money-des{  
+  width:100%;
+  position:absolute;  
+  top:8.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  color: #FFFFFF;    
+  font-size:1.625rem
+}
+.coupon-dig .coupon-dig_des{
+  width:100%;
+  position:absolute;  
+  top:13.875rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ffe75f
+}
+.coupon-dig .coupon-dig_date{
+  position:absolute;  
+  top:15.125rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #ffe75f
+}
+.coupon-dig .dig_nikeName{  
+  position:absolute;  
+  top:21rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%); 
+  text-align:center;  	
+  background-image:url(../imgs/dig_nikeName.png);
+  background-repeat:no-repeat;
+  width:12.75rem;
+  height:5.5625rem;
+  background-size:100% 100%;
+} 
+.coupon-dig .dig_nikeName span{
+  line-height:5.5625rem;
+} 
+.txet_content {
+  width:100%;
+  margin: 0 auto;  
+  text-align:center
+}
+.txet_content span{
+  width:100%;
+  color:#b34916;
+  font-size:0.9375rem;
+}
+/* 下方介绍 样式*/
+ footer{
+  position:fixed; 
+  bottom:0;
+  height:3rem;
+  width:100%;
+  background-color:#fefbf0;
+  color:#fff;
+  font-size:1.461rem;
+  text-align:center;
+  max-width: 750px;
+}
+.logo{
+  float:left;
+  width:10.3rem;
+  display:inline-block;
+  vertical-align:middle;
+  margin-top:0.5rem;
+  margin-left:0.625rem;  
+}
+.logo .logo-img{  
+  float:left;
+  background-image:url(../imgs/log-gbanker.png);
+  background-repeat:no-repeat;
+  width:2.1875rem;
+  height:2.1875rem;
+  background-size:100% 100%;
+}
+.logo .logo-des{  
+  float:left; 
+  margin-left:0.625rem;  
+  margin-top:0.5rem;
+  background-image:url(../imgs/g-banker.png);
+  background-repeat:no-repeat;
+  width:2.96875rem;
+  height:1.125rem;
+  background-size:100% 100%;
+}

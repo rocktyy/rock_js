@@ -1,0 +1,1476 @@
+@media screen and (min-width:320px){
+		html {font-size:12px;}
+}
+@media screen and (min-width:375px){
+	html {font-size:14px;}
+}
+@media screen and (min-width:414px){
+	html {font-size:16px;}
+}
+@media screen and (min-width:640px){
+	html {font-size:24px;}
+}
+/* input 增加背景图
+   box-shadow:0 1px #fde233 inset,  0px 4px 5px rgba(247,149,10,0.75);
+ */
+/*公共*/
+html,body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	color:#a76200;
+	background-color:#fd9e09;;
+	font-family:"黑体";
+	max-width:750px;
+    margin:0 auto;
+}   
+img{
+  margin:0 auto;
+  display:block;
+}
+ul,ul li{
+    list-style: none;
+	margin:0;
+	padding:0;
+	
+}
+input[type=button]{
+	-webkit-appearance:none;
+	outline:none
+}
+font{
+  font-family: "Helvetica";
+}
+.goldNum2{
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 3.75rem;
+}
+p{
+  margin:0;
+  padding:0;
+}
+p.text{
+    font-size:.857rem;
+    text-align:center;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+/* 挖矿 黄金包时背景 div
+.rainbow-radial-gradient{
+    width: 100%;
+    min-height:100%;
+    background-image: -webkit-radial-gradient(50% 40%,closest-corner,#FFD012 0%,#ff8c1c 100%);  
+    background-image: -moz-radial-gradient(50% 40%,closest-corner,#FFD012 0%,#ff8c1c 100%); 
+    background-image: -o-radial-gradient(50% 40%,closest-corner,#FFD012 0%,#ff8c1c 100%); 
+    background-image: -ms-radial-gradient(50% 40%,closest-corner,#FFD012 0%,#ff8c1c 100%); 
+    background-image: radial-gradient(50% 40%,closest-corner,#FFD012 0%,#ff8c1c 100%); 
+ }*/
+ /* 挖矿背景 div*/
+.rainbow-radial-gradient{
+    width: 100%;
+    height:100%;
+    min-height:100%;
+    background-image: -webkit-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FEC32F 65%,#fd9e09 100%);  
+    background-image: -moz-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FEC32F 65%,#fd9e09 100%); 
+    background-image: -o-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,,#FEC32F 65%,#fd9e09 100%); 
+    background-image: -ms-radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FEC32F 65%,#fd9e09 100%);  
+    background-image: radial-gradient(50% 40%,closest-corner,#FFD617 0%,#FECE33 50%,#FDBB2E 65%,#fd9e09 100%);   
+ }
+ .digInfo-lodding{
+  display:none;
+}
+ .pre-loading{
+  text-align:center;
+  padding-top:15px;
+  padding-bottom:2rem;
+}
+.pre-loading p{
+  margin-top: -30px;
+  font-size:1.214rem;
+  color:#ac3004;
+}
+.pre-loading img{
+  margin-top:-16.688rem;  
+  position:relative;
+  z-index:2;
+}
+ 
+ .gold-mine{
+  display:none;
+}
+
+ /**
+ 挖矿 没挖到 (-1)
+**/
+.gold-mine{
+  display:none;
+}
+.gold-mine-img{
+  position:absolute;
+  width:100%;
+}
+/* 挖矿 人数字 css*/
+.num-div{
+  text-align: center;
+  font-size:1.33rem;
+  margin-top:58px;
+  position:relative;
+  z-index:1;
+}
+.num-div font{
+  color: #fff;
+  padding:0 0.5rem;
+  font-size:2rem;
+}
+
+/* 山背景，斧子，特效css*/
+.mountain-win{
+  padding-top: 9rem;
+  position: relative;
+  height:16.688rem;
+}
+.hammer{
+  background:url(../imgs/hammer.png?20160121.png) no-repeat;
+  width:5.656rem;
+  height:6.844rem;
+  background-size:100%;
+  margin:0 auto;
+  /* margin-top: -14.625rem;
+  margin-right: 3.7rem; */
+  margin-top: -14.625rem;
+  margin-right: 13%;
+  z-index:3;
+  position: relative;
+}
+.mountain{
+  background-image:url(../imgs/mountain.png);
+  width:16.563rem;
+  height:10.625rem;
+  background-size:100%;
+  margin:0 auto;
+  margin-top:-10.625rem;
+  z-index:2;
+  position: relative;
+}
+.light{
+  background:url(../imgs/light2.png) center no-repeat;
+  width:23.438rem;
+  height:16.688rem;
+  background-size:100%;
+  margin:0 auto;
+  opacity: 0.4;
+  z-index:1;
+  position: relative;
+}
+.star{
+  background-image:url(../imgs/star.png);
+  width:0.656rem;
+  height:0.75rem;
+  background-size:100%;
+  margin: 0 auto;
+  margin-top: -7.5rem;
+  margin-right: 6rem;
+}
+.hammer-animation{
+  transition: all 1s ease 1s;
+  -webkit-animation: animation-hammer 1.2s linear infinite;
+  animation: animation-hammer 1.2s linear infinite;
+}
+.hammer-break-animation{
+  -webkit-animation: animation-hammer-break 2s linear ;
+  animation: animation-hammer-break 2s linear ;
+}
+.break-animation{
+  -webkit-animation: animation-break 2s linear ; 
+  animation: animation-break 2s  linear ; 
+}
+.light-animation{
+  -webkit-animation: animation-light 2s linear ;
+  animation: animation-light 2s  linear ;
+}
+@-webkit-keyframes animation-hammer { 
+  0% {-webkit-transform: translate(0, 0) rotate(0); } 
+  20%,30% {-webkit-transform: translate(-10%, 10%) rotate(-20deg); } 
+  100% {-webkit-transform: translate(0, 0) rotate(0); } 
+}
+
+@keyframes animation-hammer { 
+  0% { transform: translate(0, 0) rotate(0); }  
+  70%, 80% { transform: translate(-10%, 10%) rotate(-20deg); } 
+  100% { transform: translate(0, 0) rotate(0); } 
+}
+@-webkit-keyframes animation-hammer-break { 
+  0% { -webkit-transform:translate3d(0, 0, 0) rotate(0); } 10%,20% { -webkit-transform:translate3d(-40%, 40%, 0) rotate(-40deg); } 50% { -webkit-transform: translate3d(0, 0, 0) rotate(0); } 60% { -webkit-transform:translate3d(-40%, 40%, 0) rotate(-40deg); } 100% { -webkit-transform: translate3d(0, 0, 0) rotate(0); } 
+}
+
+@keyframes animation-hammer-break { 
+  0% { transform: translate3d(0%, 0, 0) rotate(0); }  10%,20% { transform: translate3d(-40%, 40%, 0) rotate(-40deg); } 50% { transform: translate3d(0%, 0, 0) rotate(0); } 60% { -webkit-transform:translate3d(-40%, 40%, 0) rotate(-40deg); } 100% { -webkit-transform: translate3d(0, 0, 0) rotate(0); } 
+}
+@keyframes animation-break {
+    50% { background-image:url(../imgs/mountain_break_small.png);}  100% {background-image:url(../imgs/mountain_break_big.png);}
+}
+@-webkit-keyframes animation-break {
+  50% { background-image:url(../imgs/mountain_break_small.png);}  100% {background-image:url(../imgs/mountain_break_big.png);} 
+}
+@keyframes animation-light {
+  10%,20%{opacity:1;} 50% {opacity: 0.4;} 60%{opacity:1;}
+}
+@-webkit-keyframes animation-light {
+  10%,20%{opacity:1;} 50% {opacity: 0.4;} 60%{opacity:1;}
+}
+/*未挖出*/
+.no-dig{
+  display:none;
+  padding-top:3.625rem;
+  margin-bottom: 4.53rem
+}
+.no-dig .no-dig-img{
+  margin-top:3.3125rem;
+  text-align: center;
+  width:64.13%
+}
+.no-dig .text-div{
+  text-align: center;
+}
+.no-dig .text-tips,.end .text-tips{
+  width:12.5rem;
+  font-size:1.28rem;
+  font-color:#c35c08
+}
+.no-dig .text{
+  margin-top:0.90rem;
+  margin-bottom:1.90rem;
+  font-size:0.75rem;	
+}
+.down{
+    width:0; 
+    height:0; 
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:19px solid #FFE684;
+    margin:0 auto;
+}
+.more{
+   text-align:center;
+}
+/* box-shadow:-10px 0 10px red, 左边阴影  */
+.more a{
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 1.357rem;
+    background-color: #fc6b00;
+    color: #fef7e1;
+    border: 0;
+    border-radius: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    width:14.9rem;
+    height: 2.785rem;
+    line-height: 2.8rem;
+    box-shadow:inset 0 -2px 0 #f04e00;
+    /* 阴影 色值修改*/
+    -webkit-box-shadow: 0px 0.2rem 0.15625rem rgba(250,150,7,0.75);
+    -moz-box-shadow: 0px 0.2rem 0.15625rem rgba(250,150,7,0.75);
+    text-decoration: none;
+    /*字间距10px*/
+  	font-weight:bold;
+  	letter-spacing:0.25rem;
+}
+
+/*挖出金矿 100mg以下*/
+.gold-dig{
+  display:none;  
+  padding-bottom: 2.6rem
+}
+.gold-dig-bg{
+  background-image:url(../imgs/gold-hb-bg.png);
+  background-repeat:no-repeat;
+  width:19.5625rem;
+  height:23.84375rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;  
+  position:relative;
+}
+/*update:tianyuyan; date:2016-3-28*/
+.gold-dig .top-content{	
+  padding-top:1.625rem;
+  margin-bottom:0.5625rem;
+  text-align: center;
+}
+.gold-dig .top-content span{
+ margin-top: 1.03rem;
+ text-align: center;
+ color:#fff7d2;
+ font-size:0.75rem
+}
+.gold-dig .money-des{
+  width:100%;
+  position:absolute;  
+  top:7.625rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);  
+ text-align: center;
+ color: #FFFFFF
+}
+.gold-dig .gold-dig_des{
+  position:absolute;  
+  top:11.8rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);  
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ffe75f
+}
+.gold-dig .gold-dig_date{
+  position:absolute;  
+  top:13rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);  
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ffe75f
+}
+.gold-dig .get_hongbao{	
+  position:absolute;  
+  top:16rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border:1px solid  #fee076;
+  border-radius: 2rem;
+  width: 11.1125rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #fee076;
+  outline:none;    
+  letter-spacing:0.25rem;
+  /* 红色背景图的阴影 */
+  font-weight:600; 
+}
+/* 炫耀按钮 */
+.gold-dig .share_flaunt{
+  position:absolute;  
+  top:19.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border:none;
+  border-radius: 2rem;
+  width: 11.1125rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #fc5502;
+  outline:none;  
+  letter-spacing:0.25rem;
+  /* 红色背景图的阴影 */
+  font-weight:600;
+  box-shadow:0px 0.125rem 0.15625rem rgba(247,149,10,0.75); 
+}
+
+
+
+/* 挖出 100mg 最大奖励*/
+.gold-yellow-dig{
+  display:none;
+  padding-bottom: 2.6rem
+}
+.gold-yellow-dig .top-content{
+  margin-bottom: -1.71rem;
+  padding-top:1.625rem;
+  text-align: center;
+}
+.gold-yellow-dig .top-content span{
+  margin-top: 1.03rem;
+  text-align: center;
+  color:#fff7d2;
+  font-size:0.75rem
+}
+.gold-yellow-bg{
+  background-image:url(../imgs/gold-yellow-bg.png);
+  background-repeat:no-repeat;
+  width:24.5rem;
+  height:31.65rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;
+  position:relative;
+}
+.gold-yellow-bg .money-des{
+  width:100%;
+  position:absolute;  
+  top:11rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;	
+  color: #a74b00
+}
+.gold-yellow-bg .gold-dig_des{
+  position:absolute;  
+  top:16rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ce7802
+}
+.gold-yellow-bg .gold-dig_date{
+  position:absolute;  
+  top:17.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ce7802
+}
+.gold-yellow-bg .get_hongbao{
+  position:absolute;  
+  top:20.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border:1px solid  #eb6c04;
+  border-radius: 2rem;
+  width: 11.375rem;
+  height:2.5rem;
+  line-height:2.5rem;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #d46102;
+  outline:none;    
+  letter-spacing:0.25rem;
+  /* 红色背景图的阴影 */
+  font-weight:600; 
+}
+/* 炫耀按钮 */
+.gold-yellow-bg .share_flaunt{
+  position:absolute;  
+  top:24rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border:none;
+  border-radius: 2rem;
+  width: 11.375rem;
+  height:2.5rem;
+  line-height:2.5rem;
+  background-color: #ffe04f;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #d78009;
+  outline:none;  
+  letter-spacing:0.25rem;
+  /* 红色背景图的阴影 */
+  font-weight:600;
+  box-shadow:0px 0.125rem 0.15625rem rgba(247,149,10,0.75); 
+}
+
+/*挖出优惠券 coupon*/
+.coupon-dig{
+  display:none;
+  padding-bottom: 2.6rem
+}
+.coupon-dig .top-content{
+  padding-top:1.625rem;
+  margin-bottom:0.625rem; 
+  text-align: center;
+}
+.coupon-dig .top-content span{
+  margin-top: 1.03rem;
+  text-align: center;
+  color:#fff7d2;
+  font-size:1rem;
+  text-shadow:0 1px 1px rgba(255,255,255,1),
+}
+/* 优惠券背景图 */
+.coupon-dig .coupon-bg{
+  background-image:url(../imgs/gold-coupon-bg.png);
+  background-repeat:no-repeat;
+  width:20.25rem;
+  height:24.4125rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;  
+  position:relative;
+}
+.coupon-dig .top-des{  
+  position:absolute;  
+  top:2.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+}
+.coupon-dig .top-des span{
+  font-size: 1.75rem;
+  font-weight:500;
+  color: #ffd676
+}
+.coupon-dig .money-des{  
+  width:100%;
+  position:absolute;  
+  top:7.5rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  color: #FFFFFF;  
+}
+.coupon-dig .coupon-dig_des{
+  width:100%;
+  position:absolute;  
+  top:11.875rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #ffe75f
+}
+.coupon-dig .coupon-dig_date{
+  position:absolute;  
+  top:13.125rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #ffe75f
+}
+.coupon-dig .get_purchasegold{
+  position:absolute;  
+  top:15.625rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border:1px solid  #fee386;
+  border-radius: 2rem;
+  width: 12rem;
+  height:2.5rem;
+  line-height:2.5rem;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #fee076;
+  outline:none;    
+  letter-spacing:0.0625rem;
+  font-weight:600;
+}
+.coupon-dig .share_flaunt{
+  position:absolute;  
+  top:19.1875rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border:none;
+  width: 12rem;
+  height:2.5rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #fc5502;
+  outline: none;
+  -webkit-border-radius: 2rem;
+  letter-spacing: 2px;
+  /* 红色背景图的阴影 */  
+  font-weight:600;
+  box-shadow:0px 0.25rem 0.15625rem rgba(240,69,0,0.75);
+}
+
+
+.coupon-dig .text-tips{
+  width:17.713rem;
+}
+.coupon-dig .img-bg-dig{
+  background-image:url(../imgs/coupon-bg-img.png?20160121.png);
+  background-repeat:no-repeat;
+  width:19.844rem;
+  height:7.938rem;
+  background-size:100% 100%;
+  margin:0 auto;
+}
+.coupon-dig .img-bg-dig p{
+  color:#ffda54;
+  width:78%;
+  float:right;
+  text-align:center;
+  font-size:0.75rem;
+  line-height:1.37rem;
+  height:1.37rem;
+}
+.coupon-dig .img-bg-dig p:first-child{
+  color:#fff;
+  font-size:1.541rem;
+  padding-top:1rem;
+  text-align:center;
+  line-height:3.45rem;
+  height: 3.45rem;
+}
+.coupon-dig .img-bg-dig p:last-child{
+  font-size:0.75rem;
+  line-height:1.2rem;
+  height:1.2rem;
+}
+/* .coupon-dig .img-bg-dig p:last-child span:first-child{
+  font-size:.857rem;
+} */
+.coupon-dig .img-bg-dig p:first-child span:first-child{
+  font-size:3.285rem;
+  /* margin-left:30.14%; */
+}
+.coupon-dig .gold-btn a{
+  width:44.73%;
+}
+/*没人帮忙挖的 页面*/
+.gold-nobodydig-dig{
+  display: none;
+  text-align: center;
+  padding-top: 3.5rem;
+  padding-bottom: 2.6rem;
+}
+.gold-nobodydig-dig .gold-nobodydig-bg{
+  background-image:url(../imgs/gold-nobodydig-list.png);
+  background-repeat:no-repeat;
+  width:22.35rem;
+  height:28.42rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.gold-nobodydig-dig .gold-nobodydig-top{
+  position:relative;
+  top:3rem;
+  text-align: center;
+  color: #ffedc5
+}
+.gold-nobodydig-dig .gold-nobodydig-des{
+  position:relative;
+  top:3.25rem;
+  text-align: center;
+  color: #ffedc5
+}
+.gold-nobodydig-dig input{
+  margin-top:91.5%;
+  border:none;
+  border-radius: 2rem;
+  width: 11.1125rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #fc5502;
+  outline:none;
+  /* 红色背景图的阴影 */
+  letter-spacing: 2px;
+  font-weight:600;
+  box-shadow:0px 0.25rem 0.15625rem rgba(246,67,0,0.75);
+  
+}
+/* 有人帮忙,但没挖到 */
+.gold-somebodyhelp_nodig-dig{
+  display: none;
+  text-align: center;
+  padding-top: 3.5rem;
+}
+.gold-somebodyhelp_nodig-dig .no-dig-img{  
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  width:64.13%
+}
+.text-tips{
+  background-color:#FFE684;
+  border-radius:5px;
+  margin:0 auto;
+  color:#c35c08;
+  text-align:center;
+  height:1rem;
+  line-height:1rem;
+  padding:10px 0;
+  width: 50%;
+  text-align: center
+}
+
+
+/* 有人帮忙,挖到10mg的 显示页(5-0) start*/
+.gold-somebodyhelp_little-dig{
+  display: none;
+  text-align: center;
+  padding-top: 1.875rem
+}
+.gold-somebodyhelp_little-dig .top_content{
+  padding-bottom:0px;
+  margin-top: 1.03rem;
+  text-align: center;
+  color:#FFFFFF;
+  font-size:1.0625rem;
+}
+.gold-somebodyhelp_little-dig .top_content .friend{  
+  /* display:inline-block; 
+  white-space:nowrap;
+  text-overflow:ellipsis; 
+  -o-text-overflow:ellipsis; 
+  overflow: hidden; */ 
+}
+.gold-somebodyhelp_little-dig .gold-somebodyhelp_little-bg{
+  background-image:url(../imgs/gold-hb-bg.png);
+  background-repeat:no-repeat;
+  width:21.25rem;
+  height:26.428rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.gold-somebodyhelp_little-bg .money-des{
+  position:relative;
+  top:7.75rem;
+  text-align: center;
+  color: #FFFFFF
+}
+.gold-somebodyhelp_little-bg .gold-dig_des{
+  position:relative;
+  top:7.75rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #cd4008
+}
+.gold-somebodyhelp_little-bg .invite_friends{
+  margin-top:70%;
+  border:none;
+  border-radius: 2rem;
+  width: 12rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #fc5502;
+  outline:none;
+  letter-spacing: 1px;
+  /* 红色背景图的阴影 */
+  font-weight:600;
+  box-shadow:0px 0.125rem 0.15625rem rgba(247,149,10,0.75);
+}
+
+/* 有人帮忙,挖到100mg的 显示页(5-1) start--*/
+.gold-somebodyhelp_most-dig{
+  display: none;
+  text-align: center;
+  padding-top: 0.5rem
+}
+.gold-somebodyhelp_most-dig .top_content{
+  margin-bottom: -2rem;
+  padding-bottom:0px;
+  text-align: center;
+  margin-top: 1.03rem;
+  color:#FFFFFF;
+  font-size:1.0625rem;
+}
+/* .gold-somebodyhelp_most-dig .top_content .friend{
+  color:#FFFFFF;
+  font-size:1.0625rem;
+  display:inline-block;
+  white-space:nowrap;
+  text-overflow:ellipsis; 
+  -o-text-overflow:ellipsis; 
+  overflow: hidden;
+}
+.gold-somebodyhelp_most-dig .top_content .friend_des{
+  text-align: center;
+  color:#FFFFFF;
+  font-size:1.0625rem
+} */
+.gold-somebodyhelp_most-dig  .gold-somebodyhelp_most-bg{
+  background-image:url(../imgs/gold-yellow-bg.png);
+  background-repeat:no-repeat;
+  background-color:#;
+  width:21.25rem;
+  height:26.428rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.gold-somebodyhelp_most-dig .money-des{
+  position:relative;
+  top:9rem;
+  text-align: center;
+  color: #a74b00
+}
+.gold-somebodyhelp_most-dig .gold-dig_des{
+  position:relative;
+  top:9rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #cd4008
+}
+.gold-somebodyhelp_most-dig .invite_friends{
+  position:relative;
+  top:13rem;
+  border:none;
+  border-radius: 2rem;
+  width: 11.625rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #a74b00;
+  outline: none;
+  letter-spacing: 1px;
+  /* 黄色背景图的阴影 */
+  font-weight:500;
+  box-shadow:0px 0.125rem 0.15625rem rgba(255,189,32,0.75);
+}
+
+/*!-- 遮罩 （8）--*/
+.mask_div{
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  opacity: 0.8;
+  background: #000;
+  position: absolute; 
+  z-index: 1000; 
+  top: 0;left: 0; bottom: 0; right: 0;
+}
+.mask_div-bg{
+  background-image:url(../imgs/box-bg.png);
+  background-repeat:no-repeat;
+  width:21.25rem;
+  height:26.428rem;
+  background-size:100% 100%;
+  margin:0 auto;
+  text-align: center;
+  font-size: 1.1875rem;
+  color: #ffedc5;
+  text-align: center;
+}
+.mask_div-bg .top_des{
+  position:relative;top:9.6875rem;
+}
+.mask_div-bg .bootom_des{
+  position:relative;top:9.6875rem;
+}
+.mask_div-bg .wait{
+  position:relative;
+  top:18.25rem;left:0%;
+  border:none;
+  border-radius: 2rem;
+  width: 8rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #ec4f0a
+}
+.mask_div-bg .get_rightNow{
+  position:relative;
+  top:18.25rem;
+  border:none;
+  border-radius: 2rem;
+  width: 8rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #ec4f0a
+}
+
+/* <!-- 领取结果 little黄金(6-0）start--> */
+.acquire-glod-dig{
+  display:none;  
+  padding-top: 3.5rem;  
+  /* padding-bottom: 2.6rem; */
+  text-align: center;
+}
+.acquire-glod-dig .top_content{
+  text-align: center;
+}
+.acquire-glod-dig .friend_des{
+  color:#ffffff;
+  font-size:1.5rem
+}
+.acquire-glod-dig-bg{
+  background-image:url(../imgs/acquire-glod.png);
+  background-repeat:no-repeat;
+  width:21.25rem;
+  height:26.428rem;
+  background-size:100% 100%;
+  margin:2.25rem auto;  
+  text-align: center;
+}
+.acquire-glod-dig-bg .money_des{
+ position:relative;
+ top:7rem;
+ text-align: center;
+ color: #FFFFFF
+}
+.acquire-glod-dig-bg .gold-dig_des{
+  position:relative;
+  top:8rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #cd4008
+}
+.acquire-glod-dig-bg .gold-dig_date{
+  position:relative;
+  top:8rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #cd4008
+}
+.acquire-glod-dig-bg input{
+  position:relative;
+  top:14rem;
+  border:none;
+  border-radius: 2rem;
+  width: 11.1125rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #fc5502;
+  outline:none;  
+  /* 红色背景图的阴影 */
+  font-weight:600;
+  box-shadow:0px 0.125rem 0.15625rem rgba(247,149,10,0.75);
+}
+
+
+/* 领取结果 most黄金(6-1）start */
+.acquire-mostGlod-dig{
+  display:none;  
+  padding-top: 3.5rem;  
+  /* padding-bottom: 2.6rem; */
+  text-align: center;
+}
+.acquire-mostGlod-dig .top_content{
+  text-align: center;
+}
+.acquire-mostGlod-dig .friend_des{
+  color:#FFFFFF;
+  font-size:1.5rem
+}
+.acquire-mostGlod-dig-bg{
+  background-image:url(../imgs/acquire-mostGlod.png);
+  background-repeat:no-repeat;
+  width:21.25rem;
+  height:26.428rem;
+  background-size:100% 100%;
+  margin:2.25rem auto;  
+  text-align: center;
+}
+.acquire-mostGlod-dig .money_des{
+  position:relative;
+  top:6.875rem;
+  text-align: center;
+  color: #a74b00
+}
+.acquire-mostGlod-dig .gold-dig_des{
+  position:relative;
+  top:7.875rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #d78009
+}
+.acquire-mostGlod-dig .gold-dig_date{
+  position:relative;
+  top:7.875rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #d78009
+}
+.acquire-mostGlod-dig input{
+  position:relative;
+  top:12.725rem;
+  border:none;
+  border-radius: 2rem;
+  width: 11.1125rem;
+  height:2.43rem;
+  line-height:2.43rem;
+  background-color: #fde233;
+  font-family:'黑体';
+  font-size: 1.1875rem;
+  color: #b85606;
+  outline: none;  
+  font-weight:600;
+  /* 黄色背景图的阴影 */
+  box-shadow:0px 0.125rem 0.15625rem rgba(255,189,32,0.75);
+}
+
+
+
+/* 新增样式 */
+#friends_userList{
+  display: none;margin-top:1rem 
+}
+#friends_userList .friends_help section{
+  margin: 0 auto; margin-top: .6rem;padding: .2rem 0px;text-decoration:none;
+}
+#friends_userList .friends_help  .sec-sub-title{
+  line-height: 1.42rem;
+  background:url(../imgs/sub-title-bg.png) no-repeat;
+  background-size: 100% auto;
+  background-position: 0px;
+  font-size: .875rem;
+  color: #a74b00;
+  /*字间距：6px*/
+  letter-spacing:6px;
+  text-align: center;
+  font-weight: 500;
+}
+/* 好友列表*/
+.friends_list{
+}
+
+#friends_userList .friends_help  table{
+  width:65%;
+  margin:0 auto;
+}
+#friends_userList .friends_help  table td{ 
+  text-algin:left;
+}
+.autocut {  
+    width:4.6875rem;  
+    overflow:hidden;  
+    white-space:nowrap;  
+    text-overflow:ellipsis;  
+    -o-text-overflow:ellipsis;  
+    -icab-text-overflow: ellipsis;  
+    -khtml-text-overflow: ellipsis;  
+    -moz-text-overflow: ellipsis;  
+    -webkit-text-overflow: ellipsis;  
+}  
+
+.friends_list-animation{
+    transition: all 0.5s ease 0.5s;
+    -webkit-animation: animation_log 100s linear infinite;
+    animation: animation_log 10s linear infinite;
+} 
+
+/*3-30 之前样式*/
+.user-div{
+	height: 4.25rem; 
+	overflow: hidden; 
+	margin: 0 auto;
+	margin-top:58px;
+	position:relative;
+	z-index:1;
+}
+.user-div2{
+	margin-top:35px;
+}
+.user-total{
+    width:18rem;
+    margin:0 auto;
+}
+.user-total-animation{
+	  transition: all 0.5s ease 0.5s;
+    -webkit-animation: animation_log 100s linear infinite;
+    animation: animation_log 100s linear infinite;
+} 
+
+@-webkit-keyframes animation_log { 100% { -webkit-transform: translateY(-50%); } }
+
+@keyframes animation_log { 100% { transform: translateY(-50%); } }
+.user-total li{
+    margin-top:5px;
+}
+.user-total li font{
+    color:#fff;
+}
+.user-total li span:last-child{
+  margin-left:10px;
+}
+
+/*距排行榜最后一条信息52px */
+/* .rule-div{
+  position:fixed; 
+  bottom:2rem;
+  bottom:3.92rem;
+  text-align:center;
+  position:relative;
+  z-index:100;
+} */
+.rule-div{
+  text-align:center;
+  margin-bottom:30px;
+  padding-bottom:30px;
+  padding-top:26px;
+  position:relative;
+  z-index:1;
+}
+.rule{
+    font-size:1.071rem;
+    color:#a74b00;
+    margin:30px 0px;
+    text-align:center;
+}
+
+/*rules页面*/
+.rule_content {
+    padding: 2.07rem 1rem 0 1rem;
+    text-align: left;
+}
+.pre_content{
+	width: 20px;
+	float: left;
+	padding: 0 1rem 0 1rem;
+	font-size: 1.5rem; 
+	color: #a76200;
+    line-height: 1.5rem; 
+    margin-bottom: 1.42rem;
+}
+.rule_content p {
+    padding: 0 1rem 0 1rem;
+    font-size: 1.5rem;
+    color: #a76200;
+    line-height: 1.2;
+    margin-bottom: 1.42rem;
+    margin-left: 40px;
+}
+#rules .rainbow-radial-gradient {
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/*share 页面*/
+#share .rainbow-radial-gradient {
+    max-width: 750px;
+    margin: 0 auto;
+    height: 100%;    
+}
+#share_bg img {
+    display: block;
+    padding-top: 1.15rem;
+    margin: 0 auto;
+    width:22.15rem;
+    height:11rem;
+}
+
+#share_bg p{
+	margin-top:0.625rem;
+	margin-bottom:1.25rem;
+    font-size:1rem;
+    color:#f05f11;
+    display:block;
+    text-align:center;
+}
+
+.canada_news {
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 auto;
+    padding: 15px;
+    /*width: 80%;*/
+    min-height: 15%;
+    max-width: 69%;
+    background-color: #fef7ce;
+    overflow: hidden;
+    border: 0px;
+    box-shadow: none;
+    border-radius: 5px;
+    color: #fc6b00;
+
+}
+
+.canada_news img {
+    float: left;
+    margin-right: 0.5rem;
+    width: 3.687rem;
+}
+
+.canada_news #news_title {
+    text-align: left;
+    margin: 0px auto;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.canada_news #news_body {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin-left:4.187rem;
+}
+
+.share_button {
+    text-align: center;
+    margin-top: 1.4375rem;
+    width: 100%;
+    min-height: 5em;
+}
+.share_button #button_wx_share {	
+    background-image: url(../imgs/share_pengyouquan.png);
+    font-family: "黑体";
+    outline: none;
+    font-size: 1.4rem;
+    text-align: center;
+    min-width: 78%;
+    height:40px;
+    padding: 5px 0 5px 50px;
+    background-color: #fc6b00;
+    background-repeat:  no-repeat;
+    background-position:30% 50%;
+    background-size:1.40rem;
+    color: #fef7e1;
+    border-radius: 2rem;
+    border: 0px;
+  	letter-spacing: 2px;
+    -webkit-box-shadow: 0px 0.25rem 0.15625rem rgba(247,149,10,0.75);
+    -moz-box-shadow: 0px 0.25rem 0.15625rem rgba(247,149,10,0.75);   
+}
+/* 暂时去掉，2016-4-13 修改 */
+.share_button #button_share{	
+    margin-top: 1.25rem; 
+    background-image: url(../imgs/share_haoyou.png);
+    font-family: "黑体";
+    outline: none;
+    font-size: 1.4rem;
+    text-align: center;
+    min-width: 78%;
+    height:40px;
+    padding: 5px 0 5px 30px;
+    background-color: #fc6b00;
+    background-repeat:  no-repeat;
+    background-position:30% 50%;
+    background-size:1.40rem;
+    color: #fef7e1;
+    border-radius: 2rem;
+    border: 0px;
+  	letter-spacing: 2px;
+    -webkit-box-shadow: 0px 0.25rem 0.15625rem rgba(247,149,10,0.75);
+    -moz-box-shadow: 0px 0.25rem 0.15625rem rgba(247,149,10,0.75);    
+}
+
+
+#triangle_img {
+    width: 0px;
+    height: 0px;
+    margin: 0px auto;
+    border-top: 16px solid #fef7ce;
+    border-bottom: 0px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+/*遮罩层*/
+.mask {
+  width: 100%;
+  min-height: 100%;
+  opacity: 0.3;
+  background: #000;
+  _background: #F0F0F0;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/*loading*/
+.win-preview {
+	width: 260px;
+	height: 100px;
+	position: fixed;
+	z-index: 1001;
+	text-align: center;
+}
+
+.win-preview-loading {
+	opacity: 0.5;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+
+.win-preview-text {
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+}
+
+.win-preview-mask {
+	width: 100%;
+	min-height: 100%;
+	opacity: 0.8;
+	background: #000;
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+/*toast弹出框*/
+.toast {
+  height: 40px;
+  padding: 0 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  background-color: #494949;
+  border-radius: 4px;
+  position: fixed;
+  z-index: 1100;
+}
+/*alert、confirm弹出框*/
+.win-msg {
+  position: fixed;
+  z-index: 1001;
+  background-color: #ffffff;
+  width: 270px;
+  font-size: 17px;
+  border-radius: 7px;
+}
+.win-msg-info {
+  padding: 30px 10px;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+.win-msg-btn {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: stretch;
+  box-align: stretch;
+}
+.win-msg-btn a:nth-child(1) {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  border-right: 1px #d9d9d9 solid;
+}
+.win-msg-btn a:nth-child(2) {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  font-weight: bold;
+}
+.win-msg-btn a {
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+  color: #f0bc00;
+  font-size: 17px;
+  text-decoration: none;
+}
+.none{
+  display:none;
+}
+/* 活动打烊页面 */
+.time-out-dig{
+  display: none;
+  height:auto;
+  text-align:center;
+}
+.time-out-bg{
+  background-image:url(../imgs/time-out-bg.png);
+  background-repeat:no-repeat;
+  width:100%;
+  /*  width:23.4375rem; */
+  height:41.6875rem;
+  background-size:100% 100%;  
+  color:#fee9b5;  
+  font-weight: bold;
+  font-size:1.125rem;
+  margin:0 auto;
+  letter-spacing:0.3rem;
+  text-algin:center;
+  position:relative;
+}
+.time-out-bg .des_content_top{
+  padding-top: 15.28rem; 
+}
+.time-out-bg .des_content_bottom{
+  padding-top: 1rem; 
+}
+.time-out-bg .des_content_bottom_right{
+  margin-top:100px;
+  font-family: "Helvetica";
+}
+/*活动规则*/
+.time-out-bg .time_out_rule_div{  
+  position:absolute;
+  bottom:2.57rem;
+  left:50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  margin:0 auto;
+  z-index:1;
+}
+.time-out-bg .time_out_rule{
+  font-size:1.071rem;
+  color:#744202;
+  margin:30px 0px;
+  text-align:center;
+  text-decoration: underline;
+}

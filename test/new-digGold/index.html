@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>每天挖金矿</title>
+<link rel="shortcut icon" href="../../statics/images/package/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description"
+	content="黄金钱包是软银中国投资的互联网黄金理财平台，可便捷实现低价买金、随时买卖、存金生息、提取实物金条/金饰等功能，为普通消费者和投资者提供黄金价值管理的一站式服务，做最专业的“黄金管家”">
+<meta name="keywords" content="黄金钱包官网,黄金,金价,黄金价格,实物黄金,投资金条,黄金投资">
+<meta name="format-detection" content="telephone=no,email=no">
+<link rel="stylesheet" href="css/digGold.css">
+</head>
+<body>
+	<div class="rainbow-radial-gradient" id="digInfo">
+	    <!-- 加载初始化 -->
+		<div class="digInfo-lodding">
+			<div class="pre-loading">
+				<div class="light light-animation2"></div>
+				<img src="imgs/loading.png" width="100%"/>
+				<p>加载中，请稍等......</p>
+			</div>
+		</div>	
+	    <!--  没挖（-1） -->
+		<div class="gold-mine">
+			<img src="imgs/gold_mine_bg.png"  class="gold-mine-img">
+			<div class="mountain-win">
+				<div class="light"></div>
+				<div class="mountain"></div>
+				<div class="hammer"></div>
+				<div class="star"></div>
+			</div>
+			<div class="num-div">今日已有<font id="userNum"></font>位矿友获得黄金</div>
+		</div>		
+  		<!--  挖空了开始（0） -->
+  		<div class="no-dig">
+   			<div class="text-div">
+				<div class="text-tips">哎哟，没挖到！</div>
+		       	<div class="down"></div>
+		   	</div>
+   			<img src="imgs/no-gold.png" class="no-dig-img"/>
+   			<p class="text">不甘心，分享给好友，让好友给我挖！</p>
+			<div class="more">
+      			<a href='javascript:void(0);' class="dig_again">请好友帮我挖</a>
+   			</div>   			
+		</div>
+  		<!--  挖空了结束 -->
+
+		<!-- 挖出黄金开始 （2-0）-->
+  		<div class="gold-dig" >
+   			<div class="top-content">
+				<span>我挖到了一坨"西汉马蹄金"的边边，明儿再来挖个中间</span>
+			</div>
+			<div class="gold-dig-bg">
+			  	<div class="money-des">
+			  		<span>
+			  			<font class="goldNum2"></font>
+			  		</span>
+			    	<span>毫克</span>
+			    </div>
+			    <div class="gold-dig_des">
+			    	<span>请到您的红包中领取</span>
+			    </div>
+		    	<div class="gold-dig_date">
+		    		<span>有效期:</span>
+					<span style="margin-left:0.625rem">
+	     				<font class="goldEndTime"></font>
+	     			</span>
+	     		</div>
+	     		<!--<a href="gbanker://page_hongbao"> -->
+	     		<div class="get_hongbao" >立即拆红包</div>
+	     		<input class="share_flaunt" type="button" value="臭美一下" />
+			</div>   				
+  		</div>
+  		<!-- 挖出黄金结束 -->
+
+  		<!-- 挖出100mg黄金开始 （2-1）-->
+		<div class="gold-yellow-dig" >   
+			<div class="top-content">
+				<span>我挖到了一坨"西汉马蹄金"的边边，明儿再来挖个中间</span>
+			</div>
+			<div class="gold-yellow-bg">
+				<div class="money-des">
+			  		<span>
+			  			<font class="goldNum2"></font>
+			  		</span>
+			    	<span style="margin-left:5px;">毫克</span>
+			    </div>
+			    <div class="gold-dig_des">
+			    	<span>请到您的红包中领取</span>
+			    </div>
+			    <div class="gold-dig_date">
+		    		<span>有效期:</span>
+		    		<span style="margin-left:0.625rem">
+	     			<font class="goldEndTime"></font>
+	     			</span>
+	     		</div>	     		
+	     		<div class="get_hongbao" >立即拆红包</div>	     		
+	     		<input class="share_flaunt" type="button" value="臭美一下" />
+			 </div>
+		</div>
+		<!-- 挖出100mg黄金结束 -->
+  
+		<!-- 挖出优惠券开始 （3） -->
+		<div class="coupon-dig">
+			<div class="top-content">
+			<!-- 重要的时请说三遍：去投资，去投资，去投资  -->
+				<span></span>
+			</div>
+			<div class="coupon-bg">
+				<div class="top-des">
+			  		<span></span>
+			    </div>
+			  	<div class="money-des">
+			  		<span>
+			  		  <font class="goldNum2">
+			    	  </font>
+			    	</span>
+			    	<span>元</span>
+			    </div>
+			    <div class="coupon-dig_des">
+			    	<span></span>
+			    </div>
+	     		 <div class="coupon-dig_date">
+		    		<span>有效期:</span>
+		    		<span>
+	     				<font class="goldEndTime"></font>
+	     			</span>
+	     		</div>
+	     		<!-- <a href="gbanker://page_purchasegold">  买黄金-->
+	     		
+	     		<div class="get_purchasegold" >抓住机会 买黄金</div>	   
+	     		<input class="share_flaunt" type="button" value="臭美一下" />
+			</div>
+	    </div>		
+		
+		<!-- 没人帮忙挖的 显示页(3) start-->
+		<div class="gold-nobodydig-dig">
+			<div class="gold-nobodydig-bg">
+				<p class="gold-nobodydig-top">
+			  		<span>哎呦,拼人品的年代</span>
+			    </p>
+			    <p class="gold-nobodydig-des">
+			  		<span>还没有好友挖哦,再接再厉</span>
+			    </p>
+			    <!-- 邀请好友帮忙 -->
+			    <input class="dig_again" type="button" value="请好友帮我挖" />
+			 </div>
+	    </div>
+		<!-- 没人帮忙挖的 显示页 end-->
+
+		<!-- 有人帮忙,但没挖到的 显示页(4) start-->
+		<div class="gold-somebodyhelp_nodig-dig">
+			<div class="text-div" >
+				<div class="text-tips">哎呦，好友没挖到</div>
+		       	<div class="down"></div>
+		   	</div>
+   			<img src="imgs/no-gold.png" class="no-dig-img"/>
+   			<p class="text">不甘心，跟好友分享，补充体力再挖一次！</p>
+			<div class="more">
+      			<a href='javascript:void(0);' class="dig_again">请好友帮我挖</a>
+   			</div> 
+	    </div>
+		<!-- 有人帮忙,但没挖到的 显示页 end-->
+	    
+	    <!-- 2016-4-5 系统会在22点时，自动生效当日最高奖励，生效后请前往“我的红包”兑换领取 -->
+		<!-- 有人帮忙,挖到10mg的 显示页(5-0) start-->
+		<div class="gold-somebodyhelp_little-dig">
+			<div  class="top_content">
+				<span class="friend">金某某</span>
+				<span class="friend_des">为你挖到当前最高奖励</span>
+			</div>
+			<div class="gold-somebodyhelp_little-bg">
+			  	<p class="money-des">
+			  		<span><font class="goldNum2">
+			    	</font></span>
+			    	<span>毫克</span>
+			    </p>			   
+			    <p class="gold-dig_des">
+			    	<span>今日22点系统自动生效</span>
+			    </p>     		
+	     		<!-- 奖励22点将自动生效，请到我的红包领取 -->
+	     		<input class="invite_friends" type="button" value="请更多好友帮我挖" />
+			</div>
+
+	    </div>
+		<!-- 有人帮忙挖到10mg的 显示页 end-->
+
+		<!-- 有人帮忙,挖到100mg的 显示页(5-1) start-->
+		<div class="gold-somebodyhelp_most-dig">
+			<div  class="top_content">
+				<span class="friend">金某某</span>
+				<span class="friend_des">为你挖到当前最高奖励</span>
+			</div>
+			<div class="gold-somebodyhelp_most-bg">
+				<p class="money-des">
+			  		<span><font class="goldNum2">
+			    	</font></span>
+			    	<span style="margin-left:-0.5rem">毫克</span>
+			    </p>
+			    <p class="gold-dig_des">
+			    	<span>今日22点系统自动生效</span>
+			    </p>
+	     		<input class="invite_friends" type="button" value="请更多好友帮我挖" />
+			</div>
+
+	    </div>
+		<!-- 有人帮忙挖到100mg的 显示页 end-->
+
+		<!-- 遮罩 （none）-->
+		<div  class="mask_div" style="">	
+			<div class="mask_div-bg">
+			  	<p class="top_des">
+			  		<span>确认现在拿奖励吗？</span>
+			    </p>
+			    <p class="bootom_des">
+			  		<span>也许下一位好友挖的更多哦！</span>
+			    </p>			   
+	     		<input class="wait" style="" type="button" value="再等等" />
+	     		<input class="get_rightNow" style="" type="button" value="立即领奖" id="get_bonus"  />
+			</div>	
+		</div>
+		
+		
+		<!-- 领取结果 little黄金(6-0）start-->		
+  		<div class="acquire-glod-dig" >
+   			<div class="top_content">
+				<span class="friend_des">当前最高奖励</span>
+			</div>
+			<div class="acquire-glod-dig-bg">
+				<p class="money_des" >
+			  		<span> 
+			  		   <font class="goldNum2"></font></span>
+			    	<span>毫克</span>
+			    </p>
+			    <p class="gold-dig_des">
+			    	<span>请到您的红包中领取</span>
+			    </p>
+			    <p class="gold-dig_date">
+		    		<span>有效期:</span><span>
+	     				<font class="goldEndTime"></font>
+	     			</span>
+	     		</p>
+	     		<input class="get_hongbao" type="button" value="立即领奖励" />
+			</div>   				
+  		</div>
+  		<!-- end-->
+  		  		
+  		<!-- 领取结果 little黄金(6-1）end-->	
+  		<div class="acquire-mostGlod-dig" >
+   			<div class="top_content">
+				<span class="friend_des">当前最高奖励</span>
+			</div>
+			<div class="acquire-mostGlod-dig-bg">
+				<p class="money_des" >
+			  		<span> 
+			  		   <font class="goldNum2"></font></span>
+			    	<span>毫克</span>
+			    </p>
+			    <p class="gold-dig_des">
+			    	<span>请到您的红包中领取</span>
+			    </p>
+			    <p class="gold-dig_date">
+		    		<span>有效期:</span><span>
+	     				<font class="goldEndTime"></font>
+	     			</span>
+	     		</p>
+	     		<input class="get_hongbao" type="button" value="立即领奖励" />
+			</div>   				
+  		</div>
+  		<!-- end-->
+
+		<!-- 挖出优惠券结束 获奖人员励表 start-->
+		<div id="coupon_userList"> 
+			<div class="user-div user-div2">
+			     	<ul class="user-total" id="userTotal1" style="margin-top:0;color:#a74b00">
+					</ul>
+			</div>				
+		</div>
+		<!-- 挖出优惠券结束 获奖人员励表 end -->
+
+
+		<!-- 好友帮忙挖,获奖人员励表 start-->
+		<div id="friends_userList"> 
+			<div class="friends_help">
+			<section class="friends_rule" >
+           	  	<h4 class="sec-sub-title">勤奋的小伙伴</h4>
+           	  	    <div class="friends_list">
+				     	<table>		
+						</table>
+					</div>
+				</section>
+			</div>	
+		</div>		
+		
+	  <!-- 活动规则 start-->
+	  <div class="rule-div">
+		<a href="rules.jsp" class="rule">《活动规则》
+		</a>
+	  </div>
+	 <!-- 活动规则 end -->
+	   
+	</div><!-- 好友帮忙挖,获奖人员励表 end -->		
+
+	<!-- 挖矿结束 -->
+	<!-- 分享 start-->
+	<div class="rainbow-radial-gradient" id="shareInfo" style="display: none">
+	    <div id="share_bg">
+	        <img src="imgs/shareToUser.png">
+	        <p>邀请好友购买219新手金，可获199邀请特权金</p>
+	    </div>
+	    <div class="canada_news">
+	        <p id="news_title"></p>
+	        <img src="" width="20%" id="news_img">
+	        <p id="news_body"></p>
+	    </div>
+	    <div id="triangle_img"></div>
+	    <div class="share_button"><!-- 暂时去掉，2016-4-13 修改-->
+	        <button id="button_wx_share">分享到朋友圈</button> 
+	        <button id="button_share">分享给好友</button>
+	    </div>
+	</div>
+
+	<div class="rainbow-radial-gradient none" style="">
+		<div class="end">
+   			<div class="text-div">
+				<div class="text-tips">哎呦，没有了</div>
+		       	<div class="down"></div>
+		   	</div>
+   			<img src="imgs/no-gold.png" width="64.13%" class="no-gold"/>
+   			<p class="text" style="font-size: 1.5rem;">本次活动已结束，下次早点来哟</p>
+		</div>
+	</div>	
+	<!-- 打烊页 （-1）start-->
+	<div class="time-out-dig">
+		<div class="time-out-bg">	
+			<div class="des_content_top">			
+				<span>为了矿友们的优质睡眠 </span>	
+			</div>
+			<div class="des_content_bottom">
+				<span class="des_content_bottom_left">挖矿时间改为 </span>	
+				<span class="des_content_bottom_right">6:00-22:00</span>	
+			</div>
+			<div class="time_out_rule_div">
+				<a href="rules.jsp" class="time_out_rule">《活动规则》
+				</a>
+			</div>	
+		</div>			
+  	 </div>
+
+	<!--公共js模块 -->
+	<script type="text/javascript" src="../../statics/scripts/zepto-1.1.6-min.js"></script>
+	<script type="text/javascript" src="../../statics/scripts/spin.js"></script>
+	<script type="text/javascript" src="../../statics/scripts/common.js"></script>
+	<script type="text/javascript" src="../../statics/scripts/basePath.js"></script>
+
+	<!--挖金矿 js-->
+	<script type="text/javascript" src="js/dig_glod.js"></script>
+</body>
+</html>
