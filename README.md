@@ -8,7 +8,7 @@ jquery 组件<br/>
 例如： var t = T || '*'
 当 T 的值不是null或undefined的时候， T的值会赋给t。反之则*会赋给t
 
-2.url 获取参数
+2.url 获取参数<br/>
 function getQueryString(name) { 
 var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
 var r = window.location.search.substr(1).match(reg); 
